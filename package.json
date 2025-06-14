@@ -1,0 +1,72 @@
+{
+	"name": "@adminjs/relation-hero",
+	"version": "1.0.0",
+	"description": "Enhanced relation components for AdminJS with improved maintainability and TypeScript support",
+	"main": "dist/index.js",
+	"module": "dist/index.mjs",
+	"types": "dist/index.d.ts",
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"build": "tsup",
+		"prepublishOnly": "npm run build"
+	},
+	"tsup": {
+		"entry": [
+			"src/index.ts"
+		],
+		"format": [
+			"esm",
+			"cjs"
+		],
+		"dts": true,
+		"splitting": false,
+		"clean": true,
+		"minify": false,
+		"alias": {
+			"@/": "./src"
+		}
+	},
+	"keywords": [
+		"adminjs",
+		"admin-panel",
+		"relations",
+		"react",
+		"typescript"
+	],
+	"author": "hero-truong",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/yourusername/adminjs-relation-hero.git"
+	},
+	"bugs": {
+		"url": "https://github.com/yourusername/adminjs-relation-hero/issues"
+	},
+	"homepage": "https://github.com/yourusername/adminjs-relation-hero#readme",
+	"engines": {
+		"node": ">=14.0.0"
+	},
+	"devDependencies": {
+		"@types/lodash": "^4.14.194",
+		"@types/node": "^24.0.1",
+		"@types/react": "^19.1.8",
+		"@types/react-dom": "^19.1.5",
+		"esbuild-plugin-alias": "^0.2.1",
+		"tsup": "^8.5.0",
+		"typescript": "^5.8.3"
+	},
+	"peerDependencies": {
+		"@adminjs/design-system": "^4.1.1",
+		"adminjs": "^7.8.16"
+	},
+	"dependencies": {
+		"lodash": "^4.17.21",
+		"react": "^19.1.0",
+		"react-dom": "^19.1.0",
+		"react-redux": "^9.2.0",
+		"react-router": "^6.9.0",
+		"react-router-dom": "^6.9.0"
+	}
+}
