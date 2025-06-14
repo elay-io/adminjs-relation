@@ -1,6 +1,6 @@
 {
-	"name": "@hero/adminjs-relations",
-	"version": "1.0.0",
+	"name": "@hero-truong/adminjs-relation",
+	"version": "1.0.1",
 	"description": "Enhanced relation components for AdminJS with licensing support",
 	"main": "dist/index.mjs",
 	"module": "dist/index.mjs",

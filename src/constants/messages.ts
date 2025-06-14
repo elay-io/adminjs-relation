@@ -1,30 +1,30 @@
 export const Messages = {
-  MissingConfiguration: '[@adminjs/relations-hero]_missingConfiguration',
-  MissingRecordId: '[@adminjs/relations-hero]_missingRecordId',
-  InvalidRelationType: '[@adminjs/relations-hero]_invalidRelationType',
-  JoinKeyMissing: '[@adminjs/relations-hero]_joinKeyMissing',
-  NoRelationRecordsTitle: '[@adminjs/relations-hero]_noRelationRecordsTitle',
-  NoRelationRecords: '[@adminjs/relations-hero]_noRelationRecords',
-  JunctionMissing: '[@adminjs/relations-hero]_junctionMissing',
-  JunctionResourceIdMissing: '[@adminjs/relations-hero]_junctionResourceIdMissing',
-  JunctionResourceMissing: '[@adminjs/relations-hero]_junctionResourceMissing',
-  ChooseItemSubtitle: '[@adminjs/relations-hero]_chooseItemSubtitle',
-  ManyToManyRelationAlreadyExists: '[@adminjs/relations-hero]_mnRelationAlreadyExists',
-  RelationSuccessfullyAdded: '[@adminjs/relations-hero]_relationSuccessfullyAdded',
-  RelationSuccessfullyDeleted: '[@adminjs/relations-hero]_relationSuccessfullyDeleted',
-  QueryParamsMissing: '[@adminjs/relations-hero]_queryParamsMissing',
-  JunctionRecordMissing: '[@adminjs/relations-hero]_junctionRecordMissing',
+  MissingConfiguration: '[@hero-truong/adminjs-relation]_missingConfiguration',
+  MissingRecordId: '[@hero-truong/adminjs-relation]_missingRecordId',
+  InvalidRelationType: '[@hero-truong/adminjs-relation]_invalidRelationType',
+  JoinKeyMissing: '[@hero-truong/adminjs-relation]_joinKeyMissing',
+  NoRelationRecordsTitle: '[@hero-truong/adminjs-relation]_noRelationRecordsTitle',
+  NoRelationRecords: '[@hero-truong/adminjs-relation]_noRelationRecords',
+  JunctionMissing: '[@hero-truong/adminjs-relation]_junctionMissing',
+  JunctionResourceIdMissing: '[@hero-truong/adminjs-relation]_junctionResourceIdMissing',
+  JunctionResourceMissing: '[@hero-truong/adminjs-relation]_junctionResourceMissing',
+  ChooseItemSubtitle: '[@hero-truong/adminjs-relation]_chooseItemSubtitle',
+  ManyToManyRelationAlreadyExists: '[@hero-truong/adminjs-relation]_mnRelationAlreadyExists',
+  RelationSuccessfullyAdded: '[@hero-truong/adminjs-relation]_relationSuccessfullyAdded',
+  RelationSuccessfullyDeleted: '[@hero-truong/adminjs-relation]_relationSuccessfullyDeleted',
+  QueryParamsMissing: '[@hero-truong/adminjs-relation]_queryParamsMissing',
+  JunctionRecordMissing: '[@hero-truong/adminjs-relation]_junctionRecordMissing',
 };
 
 export const Labels = {
-  ChooseItemHeader: '[@adminjs/relations-hero]_chooseItemHeader',
-  DeleteRelationHeader: '[@adminjs/relations-hero]_deleteRelationHeader',
+  ChooseItemHeader: '[@hero-truong/adminjs-relation]_chooseItemHeader',
+  DeleteRelationHeader: '[@hero-truong/adminjs-relation]_deleteRelationHeader',
 };
 
 export const Actions = {
-  AddItem: '[@adminjs/relations-hero]_addItem',
-  RemoveRelation: '[@adminjs/relations-hero]_removeRelation',
-  RemoveRecord: '[@adminjs/relations-hero]_removeRecord',
+  AddItem: '[@hero-truong/adminjs-relation]_addItem',
+  RemoveRelation: '[@hero-truong/adminjs-relation]_removeRelation',
+  RemoveRecord: '[@hero-truong/adminjs-relation]_removeRecord',
 };
 
 export enum RelationType {
