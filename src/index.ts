@@ -15,7 +15,7 @@ export * from '@/relations.feature';
 export * from '@/actions/index';
 
 // Utility functions
-export * from '@/utils/index';
+export * from '@/utils';
 
 // Translations and messages
 export * from '@/translations';

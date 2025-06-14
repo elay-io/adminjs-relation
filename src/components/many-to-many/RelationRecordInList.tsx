@@ -2,13 +2,14 @@ import { Placeholder, TableCell, TableRow } from "@adminjs/design-system";
 import { BasePropertyComponent, BasePropertyJSON, RecordJSON, ResourceJSON } from "adminjs";
 import React from "react";
 import { RelationRecordInListActions } from "./RelationRecordInListActions";
+import allowOverride from '@/components/shared/allow-override';
 type Props = {
     resource: ResourceJSON;
     record: RecordJSON;
     isLoading?: boolean;
 };
 
-export const RelationRecordInList: React.FC<Props> = ({
+const RelationRecordInList: React.FC<Props> = ({
     resource,
     record,
     isLoading
@@ -59,3 +60,10 @@ export const RelationRecordInList: React.FC<Props> = ({
         </TableRow>
     );
 };
+
+const OverridableRelationRecordInList = allowOverride(RelationRecordInList, 'RelationRecordInList')
+export {
+    OverridableRelationRecordInList as default,
+    OverridableRelationRecordInList as RelationRecordInList,
+    RelationRecordInList as OriginalRelationRecordInList,
+}

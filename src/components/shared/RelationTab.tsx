@@ -9,7 +9,7 @@ import { RelationRecordsTable as ManyToManyRelationRecordsTable } from '../many-
 import { RelationResourceActions as ManyToManyRelationResourceActions } from '../many-to-many/RelationResourceActions';
 import { RelationRecordsTable as OneToManyRelationRecordsTable } from '../one-to-many/RelationRecordsTable';
 import { RelationResourceActions as OneToManyRelationResourceActions } from '../one-to-many/RelationResourceActions';
-import allowOverride from './allow-override';
+import allowOverride from '@/components/shared/allow-override';
 import { ManyToManyRelationOptions } from '@/global-types';
 import { RelationType } from '@/constants';
 

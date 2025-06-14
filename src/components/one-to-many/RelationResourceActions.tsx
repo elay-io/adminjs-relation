@@ -4,12 +4,13 @@ import React from "react";
 import { useRelationConfig } from "../../providers/RelationConfigProvider";
 import { useRedirectUrl } from "../shared/useRedirectUrl";
 import { OneToManyRelationOptions } from "@/global-types";
+import allowOverride from "../shared/allow-override";
 
 type Props = {
     targetResource: ResourceJSON;
 };
 
-export const RelationResourceActions: React.FC<Props> = ({ targetResource }) => {
+const RelationResourceActions: React.FC<Props> = ({ targetResource }) => {
     const { ownerRecord, relations, relation } = useRelationConfig();
     const { ta: translateAction } = useTranslation();
     const redirectUrl = useRedirectUrl();
@@ -51,3 +52,12 @@ export const RelationResourceActions: React.FC<Props> = ({ targetResource }) => 
         </Box>
     );
 };
+
+
+
+const OverridableRelationResourceActions = allowOverride(RelationResourceActions, 'RelationResourceActions')
+export {
+    OverridableRelationResourceActions as default,
+    OverridableRelationResourceActions as RelationResourceActions,
+    RelationResourceActions as OriginalRelationResourceActions,
+}

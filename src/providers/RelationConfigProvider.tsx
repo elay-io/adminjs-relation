@@ -1,3 +1,4 @@
+import allowOverride from '@/components/shared/allow-override';
 import { RelationsFeatureOptions } from '@/global-types';
 import { RecordJSON, ResourceJSON } from 'adminjs';
 import React, { PropsWithChildren, createContext, useContext, useState, useCallback } from 'react';
@@ -16,7 +17,7 @@ type UseRelationConfigResult = Omit<RelationConfigProps, 'children'> & {
 
 const RelationConfigContext = createContext(null);
 
-export const RelationConfigProvider: React.FC<RelationConfigProps> = ({ children, ...relationConfig }) => {
+const RelationConfigProvider: React.FC<RelationConfigProps> = ({ children, ...relationConfig }) => {
     const [refreshToken, setRefreshToken] = useState(0);
 
     const refresh = useCallback(() => {
@@ -45,3 +46,12 @@ export const useRelationConfig = (): UseRelationConfigResult => {
 
     return context;
 };
+
+
+
+const OverridableRelationConfigProvider = allowOverride(RelationConfigProvider, 'RelationConfigProvider')
+export {
+    OverridableRelationConfigProvider as default,
+    OverridableRelationConfigProvider as RelationConfigProvider,
+    RelationConfigProvider as OriginalRelationConfigProvider,
+}

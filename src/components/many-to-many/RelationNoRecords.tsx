@@ -4,11 +4,12 @@ import React from "react";
 import { Messages } from "../../constants/messages";
 import { useRelationConfig } from "../../providers/RelationConfigProvider";
 import { ManyToManyRelationOptions } from "@/global-types";
+import allowOverride from '@/components/shared/allow-override';
 
 type Props = {
     resource: ResourceJSON;
 };
-export const RelationNoRecords: React.FC<Props> = ({ resource }) => {
+const RelationNoRecords: React.FC<Props> = ({ resource }) => {
     const { name: resourceName, id: resourceId, resourceActions } = resource;
 
     const {
@@ -66,3 +67,10 @@ export const RelationNoRecords: React.FC<Props> = ({ resource }) => {
         </InfoBox>
     );
 };
+
+const OverridableRelationNoRecords = allowOverride(RelationNoRecords, 'RelationNoRecords')
+export {
+    OverridableRelationNoRecords as default,
+    OverridableRelationNoRecords as RelationNoRecords,
+    RelationNoRecords as OriginalRelationNoRecords,
+}

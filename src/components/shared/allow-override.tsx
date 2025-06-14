@@ -12,7 +12,7 @@ import React, { ComponentType } from 'react'
  * @example
  * new ComponentLoader().override('SidebarFooter', MySidebarFooter)
  */
-function allowOverride<P extends Record<string, unknown>>(
+function allowOverride<P extends Record<string, any>>(
   OriginalComponent: ComponentType<P>,
   name: string,
 ): ComponentType<P & { OriginalComponent?: ComponentType<P> }> {

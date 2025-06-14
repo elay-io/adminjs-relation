@@ -4,6 +4,7 @@ import React from "react";
 import { useNavigate } from "react-router";
 import { RelationRecordInListActions } from "./RelationRecordInListActions";
 import { useRedirectUrl } from "../shared/useRedirectUrl";
+import allowOverride from "../shared/allow-override";
 
 const viewHelpers = new ViewHelpers();
 
@@ -13,7 +14,7 @@ type Props = {
     isLoading?: boolean;
 };
 
-export const RelationRecordInList: React.FC<Props> = ({
+const RelationRecordInList: React.FC<Props> = ({
     resource,
     record,
     isLoading
@@ -81,3 +82,11 @@ export const RelationRecordInList: React.FC<Props> = ({
         </TableRow>
     );
 };
+
+
+const OverridableRelationRecordInList = allowOverride(RelationRecordInList, 'RelationRecordInList')
+export {
+    OverridableRelationRecordInList as default,
+    OverridableRelationRecordInList as RelationRecordInList,
+    RelationRecordInList as OriginalRelationRecordInList,
+}

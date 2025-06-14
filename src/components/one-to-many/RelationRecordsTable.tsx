@@ -4,13 +4,14 @@ import React from "react";
 import { useRelationConfig } from "../../providers/RelationConfigProvider";
 import { RelationNoRecords } from "./RelationNoRecords";
 import { RelationRecordInList } from "./RelationRecordInList";
+import allowOverride from "../shared/allow-override";
 
 type Props = {
     targetResource: ResourceJSON;
     records: ListActionResponse['records'];
     isLoading: boolean;
 };
-export const RelationRecordsTable: React.FC<Props> = ({
+const RelationRecordsTable: React.FC<Props> = ({
     targetResource,
     records,
     isLoading
@@ -53,3 +54,13 @@ export const RelationRecordsTable: React.FC<Props> = ({
         </Box>
     );
 };
+
+
+
+const OverridableRelationRecordsTable = allowOverride(RelationRecordsTable, 'RelationRecordsTable')
+export {
+    OverridableRelationRecordsTable as default,
+    OverridableRelationRecordsTable as RelationRecordsTable,
+    RelationRecordsTable as OriginalRelationRecordsTable,
+}
+

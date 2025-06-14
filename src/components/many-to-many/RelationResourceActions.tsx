@@ -25,13 +25,14 @@ import {
     useRedirectUrl
 } from "../shared/useRedirectUrl";
 import { ManyToManyRelationOptions } from "@/global-types";
+import allowOverride from "../shared/allow-override";
 type Props = {
     targetResource: ResourceJSON;
     ownerResource: ResourceJSON;
     junctionResource: ResourceJSON;
 };
 
-export const RelationResourceActions: React.FC<Props> = ({ targetResource, ownerResource, junctionResource }) => {
+const RelationResourceActions: React.FC<Props> = ({ targetResource, ownerResource, junctionResource }) => {
     const {
         ownerRecord,
         relations,
@@ -128,3 +129,11 @@ export const RelationResourceActions: React.FC<Props> = ({ targetResource, owner
         </Box>
     );
 };
+
+
+const OverridableRelationResourceActions = allowOverride(RelationResourceActions, 'RelationResourceActions')
+export {
+    OverridableRelationResourceActions as default,
+    OverridableRelationResourceActions as RelationResourceActions,
+    RelationResourceActions as OriginalRelationResourceActions,
+}

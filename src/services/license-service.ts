@@ -13,8 +13,8 @@ export class LicenseService {
 │ 🎉 Thank you for using ${PACKAGE_NAME} 🎉          
 │                                                    │
 │ 🚀 To unlock full features, please:                │
-│   👉 Follow me on LinkedIn: https://linkedin.com/in/your-profile
-│   👉 Star on GitHub: https://github.com/your-github
+│   👉 Follow me on LinkedIn: https://www.linkedin.com/in/hero-truong/
+│   👉 Star on GitHub: https://github.com/hero-truong
 │                                                    │
 │ 💡 Provide licenseKey when ready!                  │
 ╰────────────────────────────────────────────────────╯

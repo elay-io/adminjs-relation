@@ -17,13 +17,13 @@
 			"src/index.ts"
 		],
 		"format": [
-			"esm",
-			"cjs"
+			"esm"
 		],
 		"dts": true,
+		"sourcemap": false,
 		"splitting": false,
 		"clean": true,
-		"minify": false,
+		"minify": true,
 		"alias": {
 			"@/": "./src"
 		}

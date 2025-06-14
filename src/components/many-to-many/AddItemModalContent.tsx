@@ -14,6 +14,7 @@ import React, {
     useEffect,
     useState
 } from "react";
+import allowOverride from '@/components/shared/allow-override';
 
 const apiClient = new ApiClient();
 
@@ -25,7 +26,7 @@ interface Props {
     onCloseModal: (refresh?: boolean) => void;
 }
 
-export const AddItemModal: React.FC<Props> = ({
+const AddItemModal: React.FC<Props> = ({
     targetResource,
     ownerResource,
     ownerRecord,
@@ -162,4 +163,9 @@ export const AddItemModal: React.FC<Props> = ({
     );
 };
 
-export default AddItemModal;
+const OverridableAddItemModal = allowOverride(AddItemModal, 'AddItemModal')
+export {
+    OverridableAddItemModal as default,
+    OverridableAddItemModal as AddItemModal,
+    AddItemModal as OriginalAddItemModal,
+}

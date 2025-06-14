@@ -4,6 +4,7 @@ import React from "react";
 import { useLocation, useNavigate } from "react-router";
 import { useRelationConfig } from "../../providers/RelationConfigProvider";
 import { useRedirectUrl } from "../shared/useRedirectUrl";
+import allowOverride from "../shared/allow-override";
 
 const ACTION_ICONS = {
     show: "Eye",
@@ -16,7 +17,7 @@ type Props = {
     resource: ResourceJSON;
 };
 
-export const RelationRecordInListActions: React.FC<Props> = ({ record, resource }) => {
+const RelationRecordInListActions: React.FC<Props> = ({ record, resource }) => {
     const { recordActions, id: recordId } = record;
     const { id: resourceId } = resource;
     const { refresh } = useRelationConfig();
@@ -58,3 +59,11 @@ export const RelationRecordInListActions: React.FC<Props> = ({ record, resource 
         </Box>
     );
 };
+
+
+const OverridableRelationRecordInListActions = allowOverride(RelationRecordInListActions, 'RelationRecordInListActions')
+export {
+    OverridableRelationRecordInListActions as default,
+    OverridableRelationRecordInListActions as RelationRecordInListActions,
+    RelationRecordInListActions as OriginalRelationRecordInListActions,
+}
