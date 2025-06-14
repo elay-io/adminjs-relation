@@ -2,22 +2,6 @@
 
 > Advanced relation management feature for AdminJS — fully free to use with optional license system.
 
----
-
-╭────────────────────────────────────────────────────────────╮  
-│ 🎉 Thank you for using @adminjs/relations-hero!           │  
-│                                                            │  
-│ ✅ This package is free to use.                            │  
-│                                                            │  
-│ 🙏 If you find it helpful, you can support the project by: │  
-│   👉 Follow me on LinkedIn: https://www.linkedin.com/in/hero-truong/ │  
-│   👉 Give a star on GitHub: https://github.com/hero-truong │  
-│                                                            │  
-│ 🎁 If you follow & contact me, I can provide you a license │  
-│    key to remove this message permanently.                 │  
-╰────────────────────────────────────────────────────────────╯
-
----
 
 ## 📖 Introduction
 
