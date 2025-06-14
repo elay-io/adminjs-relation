@@ -6,14 +6,9 @@ import { useRelationConfig } from "../../providers/RelationConfigProvider";
 import { useRedirectUrl } from "../shared/useRedirectUrl";
 import { ManyToManyRelationOptions } from "@/global-types";
 import allowOverride from "../shared/allow-override";
+import ACTION_ICONS from "../shared/icon";
 
 const apiClient = new ApiClient();
-
-const ACTION_ICONS = {
-    show: "Eye",
-    edit: "Edit2",
-    delete: "Trash2"
-};
 
 type Props = {
     record: RecordJSON;

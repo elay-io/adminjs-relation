@@ -55,23 +55,60 @@ pnpm add @hero-truong/adminjs-relations-hero
 Define your relations using the `RelationsFeatureOptions` type:
 
 ```ts
-import { RelationsFeatureOptions } from '@hero-truong/adminjs-relations-hero';
+import {
+  RelationsFeatureOptions,
+  owningRelationSettingsFeature,
+  targetRelationSettingsFeature,
+} from '@hero-truong/adminjs-relations-hero';
 
+// 1️⃣ Define your relation configs
 const relations: RelationsFeatureOptions['relations'] = {
-  UserAssignments: {
+  // One Post has many Comments
+  comments: {
+    type: 'one-to-many',
+    target: {
+      resourceId: 'Comment',
+      // Comment.ownerPostId → Post.id
+      foreignKey: 'ownerPostId',
+    },
+  },
+  // Posts and Tags are many-to-many via PostTag
+  tags: {
     type: 'many-to-many',
     junction: {
-      joinKey: 'granterId',
-      inverseJoinKey: 'targetUserId',
-      throughResourceId: 'UserAssignment',
+      throughResourceId: 'PostTag', // the join table
+      joinKey: 'postId',            // PostTag.postId → Post.id
+      inverseJoinKey: 'tagId',      // PostTag.tagId  → Tag.id
     },
-    target: { resourceId: 'User' },
-  },
-  Projects: {
-    type: 'one-to-many',
-    target: { resourceId: 'Project', foreignKey: 'ownerId' },
+    target: {
+      resourceId: 'Tag',
+    },
   },
 };
+
+// 2️⃣ Apply the owning side feature on the Post resource
+export const createPostResource = (componentLoader) => ({
+  resource: PostModel,
+  features: [
+    owningRelationSettingsFeature({
+      componentLoader,
+      relations,
+      // licenseKey: 'YOUR_LICENSE_KEY', // optional
+    }),
+  ],
+});
+
+// 3️⃣ (Optional) Apply the reverse/target feature on Comment and Tag
+export const createCommentResource = (componentLoader) => ({
+  resource: CommentModel,
+  features: [targetRelationSettingsFeature()],
+});
+
+export const createTagResource = (componentLoader) => ({
+  resource: TagModel,
+  features: [targetRelationSettingsFeature()],
+});
+
 ```
 
 ---
@@ -203,3 +240,26 @@ MIT
 - ✅ Works with AdminJS 7.x+  
 - ✅ Tested in multiple AdminJS projects  
 - ✅ Simple integration for any AdminJS resource  
+
+
+# Action Icons Utility
+
+A small helper to override AdminJS action icons with your preferred Lucide‐React icon names, while still preserving any globally registered icons.
+
+```
+// src/utils/action-icons.ts
+
+// Grab any icons already registered globally on window.AdminJS.icons,
+// or fall back to an empty object if none exist.
+const defaultIcons = (window as any).AdminJS?.icons || {};
+
+// Define (or override) the built-in AdminJS action icons:
+const ACTION_ICONS = {
+  ...defaultIcons,
+  show:   'Eye',    // “Show” action will use the Eye icon
+  edit:   'Edit2',  // “Edit” action will use the Edit2 icon
+  delete: 'Trash2', // “Delete” action will use the Trash2 icon
+};
+
+export default ACTION_ICONS;
+```
