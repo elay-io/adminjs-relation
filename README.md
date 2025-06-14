@@ -1,13 +1,13 @@
-# @adminjs/relation-hero
+# @hero/adminjs-relations
 
 Enhanced relation components for AdminJS with improved maintainability and TypeScript support.
 
 ## Installation
 
 ```bash
-npm install @adminjs/relation-hero
+npm install @hero/adminjs-relations
 # or
-yarn add @adminjs/relation-hero
+yarn add @hero/adminjs-relations
 ```
 
 ## Features
@@ -21,7 +21,7 @@ yarn add @adminjs/relation-hero
 ## Usage
 
 ```tsx
-import { RelationsShowProperty, RelationsListProperty, RelationsEditProperty } from '@adminjs/relation-hero';
+import { RelationsShowProperty, RelationsListProperty, RelationsEditProperty } from '@hero/adminjs-relations';
 
 // Use in your AdminJS resource configuration
 const adminJsOptions = {

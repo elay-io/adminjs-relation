@@ -1,13 +1,12 @@
 {
-	"name": "@adminjs/relation-hero",
+	"name": "@hero/adminjs-relations",
 	"version": "1.0.0",
-	"description": "Enhanced relation components for AdminJS with improved maintainability and TypeScript support",
+	"description": "Enhanced relation components for AdminJS with licensing support",
 	"main": "dist/index.mjs",
 	"module": "dist/index.mjs",
 	"types": "dist/index.d.mts",
 	"files": [
-		"dist",
-		"components"
+		"dist"
 	],
 	"scripts": {
 		"build": "tsup",
@@ -22,13 +21,6 @@
 	],
 	"author": "hero-truong",
 	"license": "MIT",
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/yourusername/adminjs-relation-hero.git"
-	},
-	"bugs": {
-		"url": "https://github.com/yourusername/adminjs-relation-hero/issues"
-	},
 	"homepage": "https://github.com/yourusername/adminjs-relation-hero#readme",
 	"engines": {
 		"node": ">=14.0.0"

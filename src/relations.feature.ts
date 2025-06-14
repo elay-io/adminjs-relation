@@ -87,13 +87,7 @@ export const owningRelationSettingsFeature = ({
   const position = Number.MAX_SAFE_INTEGER;
   const { show, edit, list } = bundleRelationsComponents(componentLoader);
 
-  const { status, msg } = LicenseService.verifyLicense(licenseKey);
-
-  // if (status !== LicenseStatusEnum.Valid) {
-  //   throw new Error(msg);
-  // }
-
-  // trackUsage(licenseKey);
+  LicenseService.verifyLicense(licenseKey);
 
   return buildFeature((resource) => {
     resource.options.locale = merge(emptyLocale, featureTranslations, resource.options.locale);
