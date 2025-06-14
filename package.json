@@ -1,6 +1,6 @@
 {
 	"name": "@hero-truong/adminjs-relation",
-	"version": "1.0.5",
+	"version": "1.0.7",
 	"description": "Enhanced relation components for AdminJS with licensing support",
 	"main": "dist/index.mjs",
 	"module": "dist/index.mjs",
@@ -21,7 +21,7 @@
 	],
 	"author": "hero-truong",
 	"license": "MIT",
-	"homepage": "https://github.com/yourusername/adminjs-relation-hero#readme",
+	"homepage": "https://github.com/hero-truong/adminjs-relation-hero#readme",
 	"engines": {
 		"node": ">=14.0.0"
 	},
