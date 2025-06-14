@@ -1,5 +1,5 @@
 import { buildFeature, ComponentLoader, FeatureType } from 'adminjs';
-import merge from 'lodash/merge';
+import merge from 'lodash/merge.js';
 import { emptyLocale, featureTranslations } from './translations';
 import { bundleComponent } from './utils/index';
 

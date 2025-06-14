@@ -13,7 +13,7 @@ const __dirname = url.fileURLToPath(new URL('.', import.meta.url));
  * @returns The bundled component id string
  */
 const bundleComponent = (loader: ComponentLoader, componentName: string): string => {
-  const componentPath = path.join(__dirname, `../components/${componentName}`);
+  const componentPath = path.join(__dirname, `./components/${componentName}`);
   return loader.add(componentName, componentPath);
 };
 

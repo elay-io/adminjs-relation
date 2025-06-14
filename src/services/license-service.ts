@@ -22,13 +22,13 @@ export class LicenseService {
   }
 
   public static verifyLicense(licenseKey?: string): VerifyLicenseResult {
-    if (!licenseKey) {
-      this.logFollowInstruction();
-      return { status: LicenseStatusEnum.Invalid, msg: 'Missing license key' };
-    }
+    // if (!licenseKey) {
+    //   this.logFollowInstruction();
+    //   return { status: LicenseStatusEnum.Invalid, msg: 'Missing license key' };
+    // }
 
     // 👉 Future: add real license verification logic here
-
+    this.logFollowInstruction();
     return { status: LicenseStatusEnum.Valid, msg: 'License key accepted' };
   }
 }

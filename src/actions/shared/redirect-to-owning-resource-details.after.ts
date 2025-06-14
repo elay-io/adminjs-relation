@@ -1,5 +1,5 @@
 import { ActionContext, ActionRequest, ActionResponse } from 'adminjs';
-import isEmpty from 'lodash/isEmpty';
+import isEmpty from 'lodash/isEmpty.js';
 
 /**
  * After hook for redirecting back to the owning resource details page

@@ -2,31 +2,16 @@
 	"name": "@adminjs/relation-hero",
 	"version": "1.0.0",
 	"description": "Enhanced relation components for AdminJS with improved maintainability and TypeScript support",
-	"main": "dist/index.js",
+	"main": "dist/index.mjs",
 	"module": "dist/index.mjs",
-	"types": "dist/index.d.ts",
+	"types": "dist/index.d.mts",
 	"files": [
-		"dist"
+		"dist",
+		"components"
 	],
 	"scripts": {
 		"build": "tsup",
 		"prepublishOnly": "npm run build"
-	},
-	"tsup": {
-		"entry": [
-			"src/index.ts"
-		],
-		"format": [
-			"esm"
-		],
-		"dts": true,
-		"sourcemap": false,
-		"splitting": false,
-		"clean": true,
-		"minify": true,
-		"alias": {
-			"@/": "./src"
-		}
 	},
 	"keywords": [
 		"adminjs",
@@ -59,9 +44,7 @@
 	},
 	"peerDependencies": {
 		"@adminjs/design-system": "^4.1.1",
-		"adminjs": "^7.8.16"
-	},
-	"dependencies": {
+		"adminjs": "^7.8.16",
 		"lodash": "^4.17.21",
 		"react": "^19.1.0",
 		"react-dom": "^19.1.0",
