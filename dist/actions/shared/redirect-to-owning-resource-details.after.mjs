@@ -1,0 +1,1 @@
+import o from"lodash/isEmpty.js";var n=(e,t,c)=>{if(!o(e.record?.errors))return e;if(t.query?.redirectUrl){let r=new URL(t.query.redirectUrl);r.searchParams.delete("redirectUrl"),e.redirectUrl=r.pathname+r.search}return e};export{n as redirectToOwningResourceDetails};

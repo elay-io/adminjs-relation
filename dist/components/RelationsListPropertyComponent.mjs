@@ -1,0 +1,1 @@
+import{Badge as m}from"@adminjs/design-system";import{useTranslation as i}from"adminjs";import r from"react";var y=e=>{let{resource:{properties:o},property:s}=e,{relationsTargets:a}=o[s.path].props,p=Object.values(a),{tl:n}=i();return r.createElement(r.Fragment,null,p.map(({resourceId:t})=>r.createElement(m,{key:t,mr:"sm"},n(t,t))))},f=y;export{f as default};

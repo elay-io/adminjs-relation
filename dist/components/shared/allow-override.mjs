@@ -1,0 +1,1 @@
+import p from"react";function m(n,e){return t=>{let o=n;return typeof window<"u"&&(o=window.AdminJS?.UserComponents?.[e]??window.THEME_COMPONENTS?.[e]??n),p.createElement(o,{...t,OriginalComponent:n})}}export{m as allowOverride,m as default};
