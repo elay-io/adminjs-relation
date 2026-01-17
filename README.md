@@ -1,11 +1,20 @@
-# @hero-truong/adminjs-relations-hero
+# @elay-io/adminjs-relation
 
-> Advanced relation management feature for AdminJS — fully free to use with optional license system.
+> React 18 compatible fork of [@hero-truong/adminjs-relation](https://github.com/hero-truong/adminjs-relation-hero) — Advanced relation management feature for AdminJS.
 
+## Why This Fork?
+
+The original `@hero-truong/adminjs-relation` package requires React 19, but AdminJS currently uses React 18. This fork updates the peer dependencies to be compatible with React 18 while maintaining all the original functionality.
+
+**Changes from original:**
+- Updated `react` peer dependency from `^19.1.0` to `^18.2.0`
+- Updated `react-dom` peer dependency from `^19.1.0` to `^18.2.0`
+- Updated `react-redux` peer dependency to support both `^8.1.0` and `^9.0.0`
+- Updated dev dependencies (`@types/react`, `@types/react-dom`) to React 18 versions
 
 ## 📖 Introduction
 
-`@hero-truong/adminjs-relations-hero` is an enhanced relations plugin for [AdminJS](https://adminjs.co/) which helps you easily manage both **one-to-many** and **many-to-many** relationships inside AdminJS resources.
+`@elay-io/adminjs-relation` is an enhanced relations plugin for [AdminJS](https://adminjs.co/) which helps you easily manage both **one-to-many** and **many-to-many** relationships inside AdminJS resources.
 
 It is heavily inspired by `@adminjs/relations` but with improved TypeScript support, easier configuration, and a simple license system that allows you to use it freely.
 
@@ -28,22 +37,22 @@ You can fully use this package for personal or commercial projects. The license 
 
 ## 🚀 Installation
 
-Using **NPM**:
+Using **NPM** (from GitHub):
 
 ```bash
-npm install @hero-truong/adminjs-relations-hero
+npm install github:elay-io/adminjs-relation
 ```
 
 Using **Yarn**:
 
 ```bash
-yarn add @hero-truong/adminjs-relations-hero
+yarn add github:elay-io/adminjs-relation
 ```
 
 Using **PNPM**:
 
 ```bash
-pnpm add @hero-truong/adminjs-relations-hero
+pnpm add github:elay-io/adminjs-relation
 ```
 
 ---
@@ -59,7 +68,7 @@ import {
   RelationsFeatureOptions,
   owningRelationSettingsFeature,
   targetRelationSettingsFeature,
-} from '@hero-truong/adminjs-relations-hero';
+} from '@elay-io/adminjs-relation';
 
 // 1️⃣ Define your relation configs
 const relations: RelationsFeatureOptions['relations'] = {
@@ -118,7 +127,7 @@ export const createTagResource = (componentLoader) => ({
 Use `owningRelationSettingsFeature` on the resource that **owns** the relations:
 
 ```ts
-import { owningRelationSettingsFeature } from '@hero-truong/adminjs-relations-hero';
+import { owningRelationSettingsFeature } from '@elay-io/adminjs-relation';
 
 export const createUserResource = () => ({
   resource: UserModel,
@@ -139,7 +148,7 @@ export const createUserResource = () => ({
 Use `targetRelationSettingsFeature` on the related resource to handle reverse logic:
 
 ```ts
-import { targetRelationSettingsFeature } from '@hero-truong/adminjs-relations-hero';
+import { targetRelationSettingsFeature } from '@elay-io/adminjs-relation';
 
 export const createProjectResource = () => ({
   resource: ProjectModel,
