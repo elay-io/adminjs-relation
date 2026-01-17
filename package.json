@@ -8,6 +8,9 @@
 	"files": [
 		"dist"
 	],
+	"publishConfig": {
+		"registry": "https://npm.pkg.github.com"
+	},
 	"scripts": {
 		"build": "tsup",
 		"prepublishOnly": "npm run build"
